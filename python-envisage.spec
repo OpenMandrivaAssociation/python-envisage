@@ -1,6 +1,6 @@
 %define module	envisage
 %define name 	python-%{module}
-%define version 4.0.0
+%define version 4.1.0
 %define release %mkrel 1
 
 Summary:	Enthought Tool Suite - envisage project
@@ -10,13 +10,13 @@ Release:	%{release}
 Source0:	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
-Url:		http://code.enthought.com/projects/envisage/
+Url:		https://github.com/enthought/envisage/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 Obsoletes:	python-enthought-envisagecore
 Obsoletes:	python-enthought-envisageplugins
-Requires:	python-apptools >= 4.0.0
-Requires:	python-traitsui >= 4.0.0
+Requires:	python-apptools >= 4.0.1
+Requires:	python-traitsui >= 4.1.0
 BuildRequires:	python-setuptools >= 0.6c8
 BuildRequires:	python-sphinx
 
