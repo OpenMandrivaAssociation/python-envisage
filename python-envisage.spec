@@ -1,22 +1,13 @@
 %define module	envisage
-%define name 	python-%{module}
-%define version 4.2.0
-%define	rel		1
-%if %mdkversion < 201100
-%define release %mkrel %{rel}
-%else
-%define	release %{rel}
-%endif
 
 Summary:	Enthought Tool Suite - extensible application framework
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		python-%{module}
+Version:	4.2.0
+Release:	2
 Source0:	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		https://github.com/enthought/envisage/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 Obsoletes:	python-enthought-envisagecore
 Obsoletes:	python-enthought-envisageplugins
@@ -58,13 +49,24 @@ framework. This project contains no plug-inn. You are free to use:
 %__python setup.py build_docs
 
 %install
-%__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
-%clean
-%__rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc *.txt *.rst examples/ build/docs/html/
 %py_sitedir/%{module}*
+
+
+%changelog
+* Mon Aug 13 2012 Lev Givon <lev@mandriva.org> 4.2.0-1
++ Revision: 814704
+- Update to 4.2.0.
+
+* Tue Dec 27 2011 Lev Givon <lev@mandriva.org> 4.1.0-1
++ Revision: 745668
+- Update to 4.1.0.
+
+* Thu Jul 07 2011 Lev Givon <lev@mandriva.org> 4.0.0-1
++ Revision: 689191
+- import python-envisage
+
+
