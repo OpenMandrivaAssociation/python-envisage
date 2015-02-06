@@ -3,7 +3,7 @@
 Summary:	Enthought Tool Suite - extensible application framework
 Name:		python-%{module}
 Version:	4.3.0
-Release:	1
+Release:	2
 Source0:	https://www.enthought.com/repo/ets/envisage-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
